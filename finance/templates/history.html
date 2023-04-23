@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in portfolio %}
+                    <tr>
+                        <td>{{ stock.name }}</td>
+                        <td>{{ stock.day }} / {{ stock.month }} / {{ stock.year }} {{ stock.hour }} : {{ stock.minute }}</td>
+                        <td>{{ stock.activity }}</td>
+                        <td>{{ stock.price }}</td>
+                        <td>{{ stock.qty }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}

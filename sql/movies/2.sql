@@ -1,0 +1,1 @@
+select birth from people where name REGEXP 'Emma Stone';

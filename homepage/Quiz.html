@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="Quiz.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                let correct = document.querySelector("#correct");
+                let incorrect = document.querySelectorAll(".incorrect");
+                let message = document.querySelector("#message");
+
+                correct.addEventListener('click', function(){
+                    correct.style.backgroundColor = "green";
+                    message.innerHTML = "Correct";
+
+                })
+
+                for (let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].addEventListener('click', function(){
+                    if (incorrect[i].style.backgroundColor !== "red") {
+                        incorrect[i].style.backgroundColor = "red";
+                        message.innerHTML = "Incorrect";
+                    }
+                    })
+                }
+
+                document.querySelector("#free-button").addEventListener('click', function(){
+                    let input = document.querySelector("input");
+                    let messagefree = document.querySelector("#free-message");
+
+                    if (input.value.toLowerCase() == "edwin hubble") {
+
+                        input.style.color = "green";
+                        messagefree.innerHTML = "Correct";
+
+                    }
+                    else {
+                        input.style.color = "red";
+                        messagefree.innerHTML = "Incorrect";
+                    }
+
+                })
+
+
+            });
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+            <ul id="home-quiz"><a href="index.html">Home</a></ul>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Shadow Cabinet is the feature of the political system of - </h3>
+                <div>
+                    <button class="incorrect">France</button>
+                    <button class="incorrect">Italy</button>
+                    <button id="correct">Great Britain</button>
+                    <button class="incorrect">Germany</button>
+                    <p id ="message"></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Who gave the first evidence of the Big Bang theory?</h3>
+                <div>
+                    <input type="text">
+                    <button id="free-button">Check Answer</button>
+                    <p id="free-message"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

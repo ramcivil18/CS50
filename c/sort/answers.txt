@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: it finished in between both, since it has omega O(n) time complexity. real run time - approx 4 secs
+
+sort2 uses: Merge sort
+
+How do you know?: finished first in sorted file, since it has omega O(nlogn) time complexity. real run time - approx 2 secs
+
+sort3 uses: Selection sort
+
+How do you know?: finished last in sorted file, since it has omega O(n^2) time complexity. real run time - approx 8 secs

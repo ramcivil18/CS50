@@ -1,0 +1,75 @@
+body {
+  background: url("images/movies.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.title-text {
+    font-family: "open sans", sans-bold;
+    font-weight: 40;
+    font-size: 80px;
+    float: center;
+    margin-left: 44%;
+    padding-top: px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+.list-order{
+    list-style: none;
+    float:right;
+    padding-left: 53vw;
+    padding-right: 10vw;
+    padding-top: 10%;
+}
+.list-order li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.list-order li a {
+    color: white;
+    text-decoration: none;
+    font-family: "open sans", sans-bold;
+    font-weight: 40;
+    font-size: 25px;
+}
+.list-order li a:hover {
+    color: black !important;
+    background: white !important;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px;
+}
+.avatar-home{
+    list-style: none;
+    float:left;
+}
+
+.avatar-home a {
+    color: white;
+    text-decoration: none;
+    font-family: "open sans", sans-bold;
+    font-weight: 40;
+    font-size: 25px;
+}
+.avatar-home a:hover {
+    color: black !important;
+    background: white;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px;
+}
+.avatar-center {
+    font-family: "open sans", sans-bold;
+    font-weight: 20;
+    font-size: 30px;
+    float: center;
+    margin-left: 44%;
+    padding-top: px;
+    text-align: left;
+    color: white;
+    margin-top: 80px;
+   justify-content: center;
+   padding-left: 140px;
+   padding-right: 60px;
+}
